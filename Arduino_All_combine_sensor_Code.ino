@@ -69,14 +69,14 @@ int vibrationSensor( int threshold ) {
   vibration_input = analogRead(VIBRATION_PIN);
   vibration_diff = abs(old_vibration_input - vibration_input);
   
-//  Serial.println("Vibration Sensor: ");
-//  Serial.print("OLD: ");
-//  Serial.print(old_vibration_input);
-//  Serial.print("    NEW: ");
-//  Serial.print(vibration_input);
-//  Serial.print("    DIFF: ");
-//  Serial.println(vibration_diff);
-//
+ /* Serial.println("Vibration Sensor: ");
+ Serial.print("OLD: ");
+ Serial.print(old_vibration_input);
+ Serial.print("    NEW: ");
+ Serial.print(vibration_input);
+ Serial.print("    DIFF: ");
+ Serial.println(vibration_diff); */
+
   Serial.print("V");
   Serial.print(":old:");
   Serial.print(old_vibration_input);
@@ -134,14 +134,14 @@ void gpsSensor(){
   alt_m_val = gps.altitude.meters(); 
   alt_valid = gps.altitude.isValid(); 
 
-//  Serial.print("GPS");
-//  Serial.print(":valid:");
-//  Serial.print(loc_valid);
-//  Serial.print(":LAT:");
-//  Serial.print(lat_val);
-//  Serial.print(":LONG:");
-//  Serial.print(lng_val);
-//  Serial.print("::");
+/* Serial.print("GPS");
+ Serial.print(":valid:");
+ Serial.print(loc_valid);
+ Serial.print(":LAT:");
+ Serial.print(lat_val);
+ Serial.print(":LONG:");
+ Serial.print(lng_val);
+ Serial.print("::"); */
   
   if (!loc_valid)
   {
@@ -201,17 +201,17 @@ void loop() {
   collisionSensor();
   gpsSensor();
   Serial.println();
-//  flexiForce();
-//  
-//  if ( vibrationSensor(3) ) {
-//    if ( flexiForce() > 100 ) {
-//      if ( collisionSensor() == 0 ) {
-//        gpsSensor();
-//        //Serial.println("############################### ACCIDENT #################################");
-//        sendMessage();
-//        delay(500);
-//      }
-//    }
-//  }
+/*flexiForce();
+  
+ if ( vibrationSensor(3) ) 
+ {    if ( flexiForce() > 100 ) {
+      if ( collisionSensor() == 0 ) {
+        gpsSensor();
+        //Serial.println("############################### ACCIDENT #################################");
+        sendMessage();
+        delay(500);
+      }
+    }
+  }*/
   delay(2000);
 }
