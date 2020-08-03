@@ -7,11 +7,11 @@
 //#include <dummy.h>
 
 /* Set these to your desired credentials. */
-const char *ssid = "GG";  //ENTER YOUR WIFI SETTINGS
-const char *password = "helloworld";
+const char *ssid = "XXXXX";  //ENTER YOUR WIFI SETTINGS
+const char *password = "XXXXXX";
 
 //Web/Server address to read/write from 
-const char *host = "http://sudoshu.xyz/accept.php";
+const char *host = "http://XXXXXXXX/accept.php"; //mention your domain name & directory of accept.php
   
 void setup() {
  delay(1000);
@@ -36,13 +36,6 @@ void setup() {
   Serial.println(ssid);
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());  //IP address assigned to your ESP
- 
-// if(Serial.available()) 
-// {
-//  String str = Serial.readString();
-//  Serial.println(str);
-// }
-}
 
 String buff = String("");
 
@@ -64,7 +57,7 @@ void sendDataToServer(String data) {
 
   //GET Data
   getData = "?sensor=" + data.substring(0, data.length() - 1); //phone kat gaya  //Note "?" added at front,
-  Link = "http://learnedge.co.in/iot/accept.php" + getData;
+  Link = "http://learnedge.co.in/iot/accept.php" + getData; 
   resetBuffer();
   
   http.begin(Link);     //Specify request destination
@@ -88,13 +81,7 @@ void loop() {
     } else {
       buff = buff + str;
     }
-//      Serial.println(buff);
- }
-//  if(Serial.available()) {
-//    String str = Serial.readString();
-//    Serial.println(str);
-// }
-// Serial.println("helloworld");
+
  delay(2000);
 
 }
