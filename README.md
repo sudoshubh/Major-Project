@@ -19,5 +19,5 @@ As the name, Automatic Car Accident Detection and Tracking, suggests before send
 - Vibration Sensor
 - RC Car
 - GPS 
-- GSM Moduel
+- GSM Module
 
