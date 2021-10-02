@@ -1,14 +1,15 @@
-  #include <ESP8266WiFi.h>
+//Code that runs on Node MCU
+//Code that Connects Node MCU to Internet and Send Sensors data to Web Server
+#include <ESP8266WiFi.h>
 #include <WiFiClient.h> 
 #include <ESP8266WebServer.h>
 #include <ESP8266HTTPClient.h>
-//#include <dummy.h>
 
-//#include <dummy.h>
 
 /* Set these to your desired credentials. */
 const char *ssid = "XXXXX";  //ENTER YOUR WIFI SETTINGS
 const char *password = "XXXXXX";
+//These changes are done by me only 
 
 //Web/Server address to read/write from 
 const char *host = "http://XXXXXXXX/accept.php"; //mention your domain name & directory of accept.php
