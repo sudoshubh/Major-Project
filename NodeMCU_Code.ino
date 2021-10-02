@@ -9,6 +9,7 @@
 /* Set these to your desired credentials. */
 const char *ssid = "XXXXX";  //ENTER YOUR WIFI SETTINGS
 const char *password = "XXXXXX";
+//These changes are done by me only 
 
 //Web/Server address to read/write from 
 const char *host = "http://XXXXXXXX/accept.php"; //mention your domain name & directory of accept.php
