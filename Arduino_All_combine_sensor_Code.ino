@@ -27,7 +27,7 @@ float vibration_diff = 0;
 #define COLLISION_PIN A0
 int collision_input = 0;
 
-
+//Not a good approach
 // GSM
 SoftwareSerial mySerial(9, 10);//(TX,RX)
 // #define MYNUMBER 
